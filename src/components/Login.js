@@ -22,9 +22,12 @@ const Login = () => {
 
   const login = (e) => {
     e.preventDefault();
-    // set cookie here
-    // set loggedIn = true and max-age = 60*1000 (one minute)
+    // # Send POST request to server for user.
 
+    // # If successful...
+    //Todo: set cookie here
+    //Todo: set loggedIn = true and max-age = 60*1000 (one minute)
+    document.cookie = 'loggedIn=true;max-age=60*1000';
     navigate('/');
   };
 
@@ -49,6 +52,7 @@ const Login = () => {
             type='password'
           />
           <Button
+            onClick={Login}
             type='submit'
             className='login-button'
             variant='contained'
