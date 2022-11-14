@@ -1,13 +1,13 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { TextField, Button, Container } from "@mui/material";
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { TextField, Button, Container } from '@mui/material';
 
 const Login = () => {
   const navigate = useNavigate();
 
   const [state, setState] = useState({
-    username: "",
-    password: "",
+    username: '',
+    password: '',
   });
 
   const handleTextChange = (e) => {
@@ -25,34 +25,34 @@ const Login = () => {
     // set cookie here
     // set loggedIn = true and max-age = 60*1000 (one minute)
 
-    navigate("/");
+    navigate('/');
   };
 
   return (
-    <div className="App">
-      <Container maxWidth="sm">
-        <form className="login-form" onSubmit={login}>
+    <div className='App'>
+      <Container maxWidth='sm'>
+        <form className='login-form' onSubmit={login}>
           <TextField
             required
             onChange={handleTextChange}
             value={state.username}
-            name="username"
-            label="Username"
-            type="text"
+            name='username'
+            label='Username'
+            type='text'
           />
           <TextField
             required
             onChange={handleTextChange}
             value={state.password}
-            name="password"
-            label="Password"
-            type="password"
+            name='password'
+            label='Password'
+            type='password'
           />
           <Button
-            type="submit"
-            className="login-button"
-            variant="contained"
-            color="primary"
+            type='submit'
+            className='login-button'
+            variant='contained'
+            color='primary'
           >
             Login
           </Button>
